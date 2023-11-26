@@ -25,7 +25,7 @@ async function getToken() {
   return response.data.response.token;
 }
 
-app.get("/test", async (req, res) => {
+app.get("/api-bpjs/test", async (req, res) => {
   try {
 
     const token = await getToken();
