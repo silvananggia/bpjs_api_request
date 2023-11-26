@@ -31,7 +31,7 @@ app.get("/", async (req, res) => {
     const token = await getToken();
 
     if (token) {
-      const apiUrl = `https://apijkn-dev.bpjs-kesehatan.go.id/wsAtlas_Dev/atlas/page/1/bulan/11/tahun/2023`;
+      const apiUrl = `https://apijkn-dev.bpjs-kesehatan.go.id/wsAtlas_Dev/atlas/page/30/bulan/11/tahun/2023`;
 
       
       const response = await axios.get(apiUrl, {
