@@ -25,7 +25,8 @@ async function getToken() {
   return response.data.response.token;
 }
 
-app.get("/api-bpjs/test", async (req, res) => {
+
+app.get("/", async (req, res) => {
   try {
 
     const token = await getToken();
@@ -82,6 +83,10 @@ app.get("/api-bpjs/test", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
+});
+
+app.get('/test', (req, res) => {
+  res.send('Hello from /api-bpjs/test');
 });
 
 app.listen(port, () => {
