@@ -25,7 +25,7 @@ async function getToken() {
   return response.data.response.token;
 }
 
-app.get("/", async (req, res) => {
+app.get("/test", async (req, res) => {
   try {
 
     const token = await getToken();
